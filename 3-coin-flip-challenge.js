@@ -18,3 +18,14 @@ if (isNaN(Number(flips))) {
 }
 
 // add your code here
+let totalFlips = 0;
+let headFlips = 0;
+for (let i = 1; i <= flips; i++) {
+  let result = flipCoin();
+  totalFlips++;
+  if (result === 'heads') {
+    headFlips++
+  }
+} 
+let percentage = (headFlips / totalFlips) * 100;
+console.log(`You flipped ${headFlips} heads out of ${totalFlips} total flips! That is ${percentage}%!`)
